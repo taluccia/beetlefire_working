@@ -10,7 +10,7 @@
     <!--meta data for sharing links on Facebook-->
     <meta property="og:title" content="Dead forests burning"/>
     <!--<meta property="og:url" content=""/>-->
-    <meta property="og:description" content="Practicing generating a story map."/>
+    <meta property="og:description" content="Practice generating a story map."/>
     <meta property="og:image" content="img/social.png"/>
 
     <!--add required stylesheets-->
@@ -33,44 +33,9 @@
 
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/storymap.2.4.css">
 
-    <style>
-        html, body, #map { width: 100%; height: 100%; margin: 0; background: #fff; }
-
-
-        /*.info-panel {*/
-        /*line-height: 16px;*/
-        /*width: 180px;*/
-        /*position: absolute;*/
-        /*z-index: 1000;*/
-        /*left: 10px;*/
-        /*bottom: 10px;*/
-        /*color: #070707;*/
-        /*padding: 6px 8px;*/
-        /*background: rgba(243, 243, 243, 0.73);*/
-        /*box-shadow: 0 0 15px rgba(0,0,0,0.2);*/
-        /*border-radius: 5px;*/
-        /*}*/
-
-
-        .info-panel i {
-            width: 16px;
-            height: 14px;
-            line-height: 18px;
-            float: left;
-            margin-top: 2px;
-            margin-right: 8px;
-            opacity: 0.7;
-        }
-
-        .info-panel p {
-            font-size: 12px;
-            line-height: 16px;
-            margin: 0;
-        }
-    </style>
 
 
 
@@ -114,23 +79,15 @@
     <div class="collapse navbar-collapse">
         <!--Create class ml-auto for the navbar items you want on the right.-->
         <ul class="navbar-nav ml-auto">
-            <li>
-                <i class="fas fa-info-circle btn" style="top:60px" data-toggle="modal" data-target="#info-modal"></i>
-            </li>
-
-
             <li class="nav-item"><a class="nav-link" "="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene1\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);">Lodgepole&nbsp;Pine Forests</a></li>
+            <li class="nav-item"><a class="nav-link" "="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene2\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);">Beetle&nbsp;Outbreak</a></li>
+            <li class="nav-item"><a class="nav-link" "="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene3\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);">Wildfire</a></li>
+            <li class="nav-item"><a class="nav-link" "="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene4\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);">Forest&nbsp;Regeneration</a></li>
 
+            <li class="nav-link"><a class="fab fa-github" href="https://github.com/taluccia/geog4572.lab5.taluccia" style="top:40px" target="_blank"></a></li>
+            <li><a class="fab fa-facebook-square btn" href="https://facebook.com/sharer.php?u=https://taluccia.github.io/geog4572.lab5.taluccia/" target="_blank"></a></li>
+            <li><i class="fas fa-info-circle btn" style="top:60px" data-toggle="modal" data-target="#info-modal"></i></li>
 
-            <li class="nav-item"><a class="nav-link" "="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene2\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);">Beetle&nbsp;Outbreak</a></li><li class="nav-item"><a class="nav-link" "="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene3\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);">Wildfire</a></li><li class="nav-item"><a class="nav-link" "="" href="javascript:window.scrollBy(0, $('section[data-scene=\'scene4\']').offset().top - $(window).scrollTop() - $('.storymap-navbar').height() - 30);">Forest&nbsp;Regeneration</a></li>
-
-
-            <li>
-                <a class="fab fa-facebook-square btn" href="https://facebook.com/sharer.php?u=https://taluccia.github.io/geog4572.lab5.taluccia/" target="_blank"></a>
-            </li>
-            <li class="nav-link">
-                <a class="fab fa-github" href="https://github.com/taluccia/geog4572.lab5.taluccia" style="top:40px" target="_blank"></a>
-            </li>
 
         </ul>
     </div>
@@ -143,19 +100,26 @@
     <div class="row">
         <div class="storymap-story">
 
-            <section data-scene="overview" data-background="assets/video_v2.mp4">
+            <section data-scene="overview" data-background="assets/video_endTrim.mp4">
                 <div class="fullscreen text-center">
                 </div>
             </section>
 
+            <section data-scene="scene0">
+
+                <h2>Overview</h2>
+
+                </div>
+            </section>
+
             <section data-scene="scene1">
-                <div class="embeded-photo img-thumbnail"></div>
+
                 <h2>Forests</h2>
                 <p>Sub-boreal forests cover vast areas in central interior British Columbia. Forests provide vital services across the region.
-                    The forests provide economic value in terms of timber harvest. They provide ecosystems services such as carbon sequestration and watershed management.
-                    Forests provide critical wildlife habitat for grizzly bears, caribou, wolverines and various bird species.  </p>
+                    The forests provide economic value in terms of <strong>timber harvest</strong>. They provide ecosystems services such as <strong>carbon sequestration</strong> and watershed management.
+                    Forests provide critical <strong>wildlife habitat</strong> for grizzly bears, caribou, wolverines and various bird species.  </p>
 
-                <p>Lodgepole pine <small>are dominant</small> species in the forests of the central interior. Historically, forest life cycles are influenced by disturbance regimes of <strong>wildfire</strong> and beetle outbreaks.
+                <p>Lodgepole pine are dominant species in the forests of the central interior. Historically, forest life cycles are influenced by disturbance regimes of <strong>wildfire</strong> and <strong>beetle outbreaks</strong>.
                     wildfire return is typically 100-150 year intervals. Wildfire results in tree mortality and forest initiation.
                     It diversifies the landscape by<span style="color:#ff525c"> creating early</span> successional habitat. Beetle outbreaks kill off mature canopy trees and release understory species.  </p>
                 <br>
@@ -163,29 +127,21 @@
                 <!--<div id="map" class="map"></div>-->
                 <!--info panel-->
                 <div class="info-panel">
-
                     <!-- legend patch items -->
-
                     <table style="width:100%">
                         <tr>
                             <td> <i style="background: #2d6f8e;"></i><p>Lodgepole Pine</p></td>
-                            <td> <i style="background: #2d6f8e;"></i><p>Lodgepole Pine</p></td>
-                            <td> <i style="background: #2d6f8e;"></i><p>Lodgepole Pine</p></td>
+                            <td> <i style="background: #c2e023;"></i><p>Spruce Hybrid</p></td>
+                            <td> <i style="background: #85d54a;"></i><p>White Spruce</p></td>
                         </tr>
                         <tr>
-                            <td>Eve</td>
-                            <td>Jackson</td>
-                            <td>94</td>
+                            <td> <i style="background: #1e9b89;"></i><p>Spruce</p></td>
+                            <td> <i style="background: #482173;"></i><p>Aspen</p></td>
+                            <td><i style="background: green;"></i><p>Forest</p></td>
                         </tr>
                     </table>
-
-
-                    <i style="background: #2d6f8e;"></i><p>Lodgepole Pine</p><br/>
-                    <i style="background: #c2e023;"></i><p>Spruce Hybrid</p><br/>
-                    <i style="background: #85d54a;"></i><p>White Spruce</p><br/>
-                    <i style="background: #1e9b89;"></i><p>Spruce</p><br/>
-                    <i style="background: #482173;"></i><p>Aspen</p><br/>
-                    <i style="background: green;"></i><p>Forest</p><br/>
+                <hr>
+                    <div class="embeded-photo img-responsive img-thumbnail"></div>
                 </div>
             </section>
 
@@ -200,12 +156,18 @@
                 <!--<div id="map" class="map"></div>-->
                 <!--info panel-->
                 <div class="info-panel">
-                    <h5>Legend</h5>
-                    <!-- legend patch items -->
-                    <i style="background: #ffffb2;"></i><p>Low Mortality</p><br/>
-                    <i style="background: #feb751;"></i><p>Moderate Mortality</p><br/>
-                    <i style="background: #f55629;"></i><p>High Mortality</p><br/>
-                    <i style="background: green;"></i><p>Forest</p><br/>
+                     <table style="width:100%">
+                        <tr>
+                            <td> <i style="background: #ffffb2;"></i><p>Low Mortality</p></td>
+                            <td> <i style="background: #feb751;"></i><p>Moderate Mortality</p></td>
+                            <td> <i style="background: #f55629;"></i><p>High Mortality</p></td>
+                        </tr>
+                        <tr>
+                            <td> <i style="background: green;"></i><p>Forest</p></td>
+                        </tr>
+                    </table>
+                    <hr>
+                    <div class="embeded-photo img-responsive img-thumbnail"></div>
                 </div>
             </section>
 
@@ -222,20 +184,27 @@
                 <!--<div id="map" class="map"></div>-->
                 <!--info panel-->
                 <div class="info-panel">
-                    <h5> Burn Severity </h5>
-                    <!-- legend patch items -->
-                    <i style="background: #1A9641;"></i><p>Unburned</p><br/>
-                    <i style="background: #FFFF33;"></i><p>Light Surface Fire</p><br/>
-                    <i style="background: #FFA500;"></i><p>Severe Surface Fire</p><br/>
-                    <i style="background: #D7191C;"></i><p>Severe Crown Fire</p><br/>
-                    <p> Burn severity categories are based on the Landscape Assessment (Key and Benson 2006).  </p>
+                    <table style="width:100%">
+                        <tr>
+                            <td> <i style="background: #1A9641;"></i><p>Unburned</p></td>
+                            <td> <i style="background: #FFFF33;"></i><p>Light Surface Fire</p></td>
+                        </tr>
+                        <tr>
+                            <td> <i style="background: #FFA500;"></i><p>Severe Surface Fire</p></td>
+                            <td> <i style="background: #D7191C;"></i><p>Severe Crown Fire</p></td>
+                        </tr>
+                    </table>
+                    <span>Source:</span>                <a href="https://www.fs.fed.us/postfirevegcondition/documents/publications/FIREMON_LandscapeAssessment.pdf">Burn Severity</a>
+                    <hr>
+                    <div class="embeded-photo img-responsive img-thumbnail"></div>
+
                 </div>
             </section>
 
 
 
             <section data-scene="scene4">
-                <h2>Recovery</h2>
+                <h2>Early Succession</h2>
                 <p>Regeneration is critical to forest recovery, and the rate of tree regeneration is variable across the landscape. Post-fire
                     early successional growth increases habitat and species biodiversity. The influx of herbaceous plants - fireweed
                     and Geranium bicknellii attract humming birds, while increased insect activity attracts black backed
@@ -251,28 +220,27 @@
                     <i style="background: #e7d3a5;"></i><p>Low recovery Rate</p>
                     <i style="background: #a7dbd3;"></i><p>Moderate Recovery Rate</p>
                     <i style="background: #018571;"></i><p>High Recovery Rate</p>
-                    <hr>
-                    <figure>
-                        <img src="img/highrecovery.JPG" class="img-thumbnail" alt="Lodgepole pine recovery" width="360" height="228">
-                        <!--<img src="img/highrecovery.JPG" class="img-responsive" alt="Lodgepole pine recovery" >-->
-                        <figcaption>High Tree Regeneration</figcaption>
-                    </figure>
-                    <hr>
-                    <figure>
-                        <img src="img/lowrecovery.JPG" alt="Lodgepole pine recovery" width="360" height="228">
-                        <figcaption>Low Tree Regeneration</figcaption>
-                    </figure>
                 </div>
+                <hr>
+                <div class="embeded-photo img-responsive img-thumbnail"></div>
             </section>
 
 
 
-            <section data-scene="end" data-background="assets/video_end.mp4">
-                <div class="fullscreen text-center">
-                    <h1 class="display-4 d-flex justify-content-center">THE END!</h1>
+
+
+        <section data-scene="end" data-background="img/end1.png">
+            <div class="fullscreen text-center">
+            <div class= "end-background-img background-fullscreen-setting text-responsive">
+                <p class ="end">
+                    Early successional composition and structure increase biodiveristy .</p>
+                <div class="credit">
+                    <!--<p><img style="width:180px;" align="right" src="img/end1.png"></p> <br/><br/><br/>-->
+                    <p>Created by Michael Cook and Anna Talucci From Oregon State University</p>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
 
         <!--map div-->
         <div class="col-sm-6 col-md-8 storymap-map"></div>
@@ -317,10 +285,20 @@
 
     // Create Legend Contents in html format
 
-    var photoLayer1 = L.photo.cluster().on('mouseover', showPhoto);
+    var topoLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
+        attribution: 'Tiles &copy; Esri &mdash; Source: Esri',
+        maxZoom: 13
+    });
+
+
+     var photoLayer1 = L.photo.cluster().on('mouseover', showPhoto);
     photoLayer1.add(photos1);
 
+    var photoLayer2 = L.photo.cluster().on('mouseover', showPhoto);
+    photoLayer2.add(photos2);
 
+    var photoLayer3 = L.photo.cluster().on('mouseover', showPhoto);
+    photoLayer3.add(photos3);
 
     function showPhoto (evt) {
 
@@ -334,18 +312,31 @@
     var layers = {
         ESRI: {layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')},
 
-	    photo: {layer: photoLayer1},
+        topo: {layer: topoLayer},
 
-        beetle: {
-            layer: L.tileLayer('assets/tilesoutbreak/{z}/{x}/{y}.png')
+	    photo1: {layer: photoLayer1},
+
+        photo2: {layer: photoLayer2},
+
+        photo3: {layer: photoLayer3},
+
+        parks: {layer: L.geoJson.ajax('assets/parks.geojson', {
+                color: 'green',
+                weight: 2,
+                opacity: 0.7
+            }),
         },
 
-
-
-        VIR: {
-            layer: L.tileLayer('assets/tilesvir/{z}/{x}/{y}.png')
-
+        fire: {layer: L.geoJson.ajax('assets/fire.geojson', {
+                color: 'orange',
+                weight: 2,
+                opacity: 0.7
+            }),
         },
+
+        beetle: {layer: L.tileLayer('assets/tilesoutbreak/{z}/{x}/{y}.png')},
+
+        vri: {layer: L.tileLayer('assets/tilesvir/{z}/{x}/{y}.png')},
 
         GEE: {
             layer: L.tileLayer('http://earthengine.google.org/static/hansen_2013/tree_alpha/{z}/{x}/{y}.png')
@@ -368,10 +359,11 @@
 
     var scenes = {
         overview: {lat: 53.248971, lng: -125.644940, zoom: 7, name: 'Cover Page', layers: []},
-        scene1: {lat: 53.267859, lng: -126.140204,  zoom: 10, name: 'Lodgepole Pine Forests', layers: [layers.photo]},
+        scene0: {lat: 53.29826, lng: -125.69520, zoom: 7, name: 'Overview', layers: [layers.topo, layers.parks, layers.fire]},
+        scene1: {lat: 53.29826, lng: -125.69520, zoom: 10, name: 'Lodgepole Pine Forests', layers: [layers.vri, layers.photo1]},
         scene2: {lat: 53.269461, lng: -125.863468, zoom: 10, name: 'Beetle Outbreak', layers: [layers.GEE,layers.beetle, ]},
-        scene3: {lat: 53.271870, lng: -125.782894, zoom: 10, name: 'Wildfire', layers: [layers.ESRI, layers.burn]},
-        scene4: {lat: 53.271870, lng: -125.782894, zoom: 10, name: 'Forest Regeneration', layers: [layers.ESRI, layers.recovery]},
+        scene3: {lat: 53.271870, lng: -125.782894, zoom: 10, name: 'Wildfire', layers: [layers.ESRI, layers.burn, layers.photo2]},
+        scene4: {lat: 53.271870, lng: -125.782894, zoom: 10, name: 'Forest Regeneration', layers: [layers.ESRI, layers.recovery, layers.photo3]},
         end: {lat: 53.248971, lng: -125.644940, zoom: 7, name: 'The End', layers: []}
     };
 
@@ -385,7 +377,7 @@
         scalebar: false,
         flyo: true,
         navwidget: true,
-mapinteraction:true,
+mapinteraction:false,
         createMap: function () {
             // create a map in the "map" div, set the view to a given place and zoom
             var map = L.map($(".storymap-map")[0], {
