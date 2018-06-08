@@ -105,11 +105,82 @@
                 </div>
             </section>
 
-            <section data-scene="scene0">
 
-                <h2>Overview</h2>
+                <section data-scene="scene0">
+                    <h2>Overview</h2>
+                        <div class="container">
+                            <p><medium>Overview of forests conditions in central interior British Columbia, Canada.<medium></p>
+                            <!--<div class="row text-center index-icon">-->
+                                <!--<div class="col-md-3 col-sm-3">-->
+									<!--&lt;!&ndash;<span class="fa-stack fa-4x">&ndash;&gt;-->
+										<!--<i class="fa fa-map-marker fa-stack-2x text-primary"></i>-->
+									<!--</span>-->
+                                    <!--<h4>-->
+                                        <!--Location-->
+                                    <!--</h4>-->
+                                    <!--<p class="description">Central Interior British Columbia</p>-->
+                                <!--</div>-->
+                                <!--<div class="col-md-3 col-sm-3">-->
+									<!--<span class="fa-bug fa-4x">-->
+										<!--<i class="fa fa-bug fa-bug-2x text-primary"></i>-->
+									<!--</span>-->
+                                    <!--<h4>-->
+                                        <!--Outbreak-->
+                                    <!--</h4>-->
+                                    <!--<p class="description">18 million hectares</p>-->
+                                <!--</div>-->
+                                <!--<div class="col-md-3 col-sm-3">-->
+									<!--<span class="fa-fire fa-4x">-->
+									<!--<i class="fa fa-fire fa-fire-2x text-primary"></i>-->
+									<!--</span>-->
+                                    <!--<h4>-->
+                                        <!--Wildfire.-->
+                                    <!--</h4>-->
+                                    <!--<p class="description">140,000 hectares</p>-->
+                                <!--</div>-->
 
-                </div>
+                            <!--</div>-->
+                            <hr>
+                            <div class="info-panel">
+                                <table style="width:100%">
+                                    <tr>
+                                        <td> <i class="fa fa-map-marker fa-map-marker-6x text-primary"></i></td>
+                                        <td> <p class="description">Location</p></td>
+                                        <td> <p class="description">British Columbia</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <i class="fa fa-bug fa-bug-6x text-primary"></i></td>
+                                        <td> <p class="description">Beetle Outbreak</p></td>
+                                        <td> <p class="description">18 Million Hectares</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td> <i class="fa fa-fire fa-fire-7x text-primary"></i></td>
+                                        <td> <p class="description">Wildfire</p></td>
+                                        <td> <p class="description">140,000 Hectares</p></td>
+                                    </tr>
+                                </table>
+
+                                <hr>
+
+
+
+                        <div>
+                            <p><img style="width:400px;" align="center" src="img/timeseries.png"></p> <br/><br/><br/>
+                        </div>
+                                <hr>
+                            <table style="width:100%">
+                                <tr>
+                                    <td> <i style="background: green;"></i><p>Provincial Parks</p></td>
+                                    <td> <i style="background: red;"></i><p>Beetle Outbreak</p></td>
+                                    <td> <i style="background: orange;"></i><p>Wildfire</p></td>
+                                </tr>
+                            </table>
+                            <div/>
+                            <hr>
+
+                </section>
+
+
             </section>
 
             <section data-scene="scene1">
@@ -322,18 +393,24 @@
 
         parks: {layer: L.geoJson.ajax('assets/parks.geojson', {
                 color: 'green',
-                weight: 2,
+                weight: 0,
                 opacity: 0.7
             }),
         },
 
-        fire: {layer: L.geoJson.ajax('assets/fire.geojson', {
+        fire: {layer: L.geoJson.ajax('assets/fire.perimeters.geojson', {
                 color: 'orange',
                 weight: 2,
                 opacity: 0.7
             }),
         },
 
+        mpb: {layer: L.geoJson.ajax('assets/2005_beetlearea3.geojson', {
+                color: 'red',
+                weight: 0,
+                opacity: 0.7
+            }),
+        },
         beetle: {layer: L.tileLayer('assets/tilesoutbreak/{z}/{x}/{y}.png')},
 
         vri: {layer: L.tileLayer('assets/tilesvir/{z}/{x}/{y}.png')},
@@ -343,9 +420,6 @@
 
         },
 
-        mpb: {
-            layer: L.tileLayer('assets/tiles2002mpb/{z}/{x}/{y}.png')
-        },
         burn: {
             layer: L.tileLayer('assets/tilesburn/{z}/{x}/{y}.png')
 
@@ -359,7 +433,7 @@
 
     var scenes = {
         overview: {lat: 53.248971, lng: -125.644940, zoom: 7, name: 'Cover Page', layers: []},
-        scene0: {lat: 53.29826, lng: -125.69520, zoom: 7, name: 'Overview', layers: [layers.topo, layers.parks, layers.fire]},
+        scene0: {lat: 53.29826, lng: -125.69520, zoom: 7, name: 'Overview', layers: [layers.mpb, layers.parks, layers.fire]},
         scene1: {lat: 53.29826, lng: -125.69520, zoom: 10, name: 'Lodgepole Pine Forests', layers: [layers.vri, layers.photo1]},
         scene2: {lat: 53.269461, lng: -125.863468, zoom: 10, name: 'Beetle Outbreak', layers: [layers.GEE,layers.beetle, ]},
         scene3: {lat: 53.271870, lng: -125.782894, zoom: 10, name: 'Wildfire', layers: [layers.ESRI, layers.burn, layers.photo2]},
